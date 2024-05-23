@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 2
+  },
+  "configurePresets": [
+    {
+      "name": "conan-2",
+      "displayName": "Conan 2.0",
+      "description": "Sets toolchain for use with conan 2.0",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
+      "warnings": {
+        "dev": true
+      },
+      "errors": {
+        "dev": true
+      },
+      "environment": {
+        "CMAKE_TOOLCHAIN_FILE": "build/conan_toolchain.cmake"
+      }
+    }
+  ]
+}
